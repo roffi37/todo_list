@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "_base.html" %}
+{% block title %}<title>Tag Confirm Delete</title>{% endblock %}
+{% block content %}
+  <h1>Delete Task</h1>
+  <p>Are you sure you want to delete the tag: {{ tag.name }}?</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete" class="btn btn-danger">
+  </form>
+{% endblock %}
